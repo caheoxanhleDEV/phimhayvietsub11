@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#050814">
+<title>PhimHayVietSub — Xem phim trực tuyến</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <a class="brand" href="#home" aria-label="PhimHayVietSub"><span class="brand-mark">◆</span><span>PhimHayVietSub</span></a>
+  <nav class="desktop-nav">
+    <a href="#home">Trang chủ</a><a href="#movies">Phim</a><a href="#genres">Thể loại</a><a href="#crew">Lồng tiếng</a>
+  </nav>
+  <div class="top-actions">
+    <button class="icon-btn" id="searchBtn" aria-label="Tìm kiếm">⌕</button>
+    <button class="icon-btn top-settings-btn" id="topSettingsBtn" aria-label="Cài đặt">⚙</button>
+    <button class="btn ghost" id="loginBtn">Đăng nhập</button>
+    <button class="btn gradient" id="registerBtn">Đăng ký</button>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero cinema-hero">
+  <div class="hero-copy">
+    <div class="eyebrow">🎬 RẠP CHIẾU PHIM</div>
+    <h1 id="heroTitle">PhimHayVietSub</h1>
+    <div class="hero-meta"><span id="heroYear">PhimHayVietSub</span><i>•</i><span id="heroGenre">Phim · Anime · Lồng tiếng</span><i>•</i><strong>★ <span id="heroRating"></span></strong></div>
+    <p id="heroDesc">Không gian xem phim trực tuyến dành cho cộng đồng PhimHayVietSub.</p>
+    <div class="hero-actions"><button class="btn gradient large" id="heroWatch">🎬 Khám phá phim</button><button class="btn ghost large" id="heroDetail">🔎 Tìm kiếm</button></div>
+  </div>
+</section>
+
+<section class="section" id="movies">
+  <div class="section-head"><h2><span class="section-icon">✦</span> Phim mới cập nhật</h2><button class="see-all" data-scroll="movies">Xem tất cả →</button></div>
+  <div class="rail" id="newRail"></div>
+</section>
+
+<section class="section" id="genres">
+  <div class="section-head"><h2><span class="section-icon">◆</span> Thể loại nổi bật</h2><button class="see-all" id="allGenres">Xem tất cả →</button></div>
+  <div class="genre-rail" id="genreRail"></div>
+</section>
+
+<section class="section" id="crew">
+  <div class="section-head"><h2><span class="section-icon">●</span> Diễn viên lồng tiếng nổi bật</h2><button class="see-all">Xem tất cả →</button></div>
+  <div class="crew-rail" id="crewRail"></div>
+</section>
+
+<footer>
+  <div class="footer-main"><div><a class="brand footer-brand" href="#home"><span class="brand-mark">◆</span><span>PhimHayVietSub</span></a><p>Nền tảng xem phim trực tuyến — anime, phim Việt, phim lồng tiếng và nhiều hơn nữa.</p></div><div><h3>Khám phá</h3><a href="#movies">Phim</a><a href="#genres">Thể loại</a><a href="#">VIP</a><a href="#" id="settingsFooter">⚙ Cài đặt</a><a href="#">Hỗ trợ</a></div></div>
+  <div class="copyright">© 2026 PhimHayVietSub. Giao diện demo frontend.</div>
+</footer>
+</main>
+
+<div class="bottom-nav" id="bottomNav" aria-label="Điều hướng chính">
+  <a class="active" data-tab="home" href="#home"><span class="tab-icon">⌂</span><span>Trang chủ</span></a>
+  <a data-tab="discover" href="#" id="discoverBottom"><span class="tab-icon">⌕</span><span>Khám phá</span></a>
+  <button class="tab-add" id="addBottom" aria-label="Thêm">＋</button>
+  <a data-tab="library" href="#movies"><span class="tab-icon">▣</span><span>Thư viện</span></a>
+  <button data-tab="account" id="accountBottom"><span class="tab-icon">♙</span><span>Tài khoản</span></button>
+</div>
+
+<div class="search-panel hidden" id="searchPanel"><div class="search-box"><button class="close-x" data-close="searchPanel" aria-label="Đóng">×</button><h2>Tìm kiếm phim</h2><input id="searchInput" autocomplete="off" placeholder="Nhập tên phim, thể loại..."/><div id="searchResults"></div></div></div>
+
+<div class="modal hidden" id="modal"><div class="modal-card" role="dialog" aria-modal="true"><button class="close-x" id="modalClose" aria-label="Đóng">×</button><div id="modalContent"></div></div></div>
+<script src="app.js"></script>
+</body>
+</html>
